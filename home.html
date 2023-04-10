@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #screen{
+        width:100%;
+        /* height:2000px; */
+        border:1px solid red;
+    }
+    #navbar1{
+        height:80px;
+        width:100%;
+        /* border:1px solid blue; */
+        background-color: #f2e9e9;
+    }
+    #navbar1>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        padding:10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(1){
+        width:10%;
+        height:100%;
+        /* border:1px solid red; */
+    }
+    #navbar1>div>div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #navbar1>div>div:nth-child(2){
+        width:60%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+    }
+    #navbar1>div>div:nth-child(2)>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #navbar1>div>div:nth-child(2)>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+    #navbar1>div>div:nth-child(3){
+        width:25%;
+        height:90%;
+        /* border:1px solid red; */
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(3)>div{
+        /* border:1px solid green; */
+        /* width:25%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:rgb(123, 29, 29);
+    }
+    #navbar1>div>div:nth-child(3)>div>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #navbar1>div>div:nth-child(3)>div>div>i{
+        margin-bottom: 5px;
+    }
+
+    #hidenav{
+        height:60px;
+        width:100%;
+        border:1px solid red;
+        display: none;
+    }
+   
+    #navbar2{
+        height:65px;
+        width:100%;
+        /* border:1px solid green; */
+    }
+    #navbar2>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #navbar2>div>div{
+        /* border:1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+    #navbar2>div>div>p{
+        font-size: 18px;
+        color: rgb(83, 82, 82);
+    }
+    #none{
+        height:200px;
+        width:200px;
+        /* border:3px solid red; */
+        margin: auto;
+        display: none;
+    }
+    #image{
+        width:100%;
+        height:700px;
+        /* border:1px solid blue; */
+    }
+    #image>img{
+        height:100%;
+        width:100%;
+    }
+    #homebody{
+        width:80%;
+        /* height:1000px; */
+        border:1px solid red;
+        margin: auto;
+    }
+    #body1{
+        /* height:810px; */
+        width:100%;
+        border:2px solid gold;
+    }
+   .samehead{
+        height:140px;
+        width:100%;
+        /* border:1px solid green; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid black;
+        margin-top: 30px;
+    }
+    .samehead>h1{
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: brown;
+        margin-bottom: 10px;
+    }
+    .samehead>p{
+        font-size: 19px;
+        color:rgb(63, 63, 63);
+    }
+    #body1>div:nth-child(2){
+        /* height:600px; */
+        width:100%;
+        /* border:2px solid black; */
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    #body1>div:nth-child(2)>div{
+        width:15%;
+        height:300px;
+        border:1px solid rgb(200, 197, 197);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    #body1>div:nth-child(2)>div:hover #hoverr{
+      display: flex;
+      justify-content: space-between;
+    justify-content: space-between;
+        width: 60%;
+        color:brown;
+    }
+  
+
+
+    #body1>div:nth-child(2)>div>img{
+        width:100%;
+        height:70%;
+    }
+    #body1>div:nth-child(2)>div>p:nth-child(2){
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: brown;
+    }
+    #body1>div:nth-child(2)>div>div{
+        display: flex;
+    }
+    #body1>div:nth-child(2)>div>div>p:nth-child(1){
+        color: rgb(74, 73, 73);
+        margin-right: 5px;
+    }
+    #body2>div:nth-child(2){
+        /* height:600px; */
+        width:100%;
+        border:1px solid red;
+        display: flex;
+        justify-content: space-between;
+    }
+    #body2>div:nth-child(2)>div{
+        width:32%;
+        height:500px;
+        border:1px solid grey;
+        margin-top: 20px;
+    }
+    #body2>div:nth-child(2)>div:hover #hide{
+        display: none;
+    }
+    #body2>div:nth-child(2)>div:hover #hoverr2{
+        justify-content: space-between;
+        width:90%;
+        color:brown;
+    }
+    #body2>div:nth-child(2)>div>div:nth-child(1){
+        height:450px;
+        width:100%;
+        border:1px solid red;
+    }
+    #body2>div:nth-child(2)>div>div:nth-child(1)>img{
+        height:100%;
+        width:100%;
+    }
+    #body2>div:nth-child(2)>div>div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:90%;
+        margin: auto;
+        padding-top: 10px;
+    }
+    #body2>div:nth-child(2)>div>div:nth-child(2)>div:nth-child(1){
+        color:brown;
+        font-size: 17px;
+        /* border: 1px solid blue; */
+    }
+    #body2>div:nth-child(2)>div>div:nth-child(2)>div:nth-child(2){
+        font-size: 17px;
+        /* border:1px solid blue; */
+        display: flex;
+        width:30%;
+        justify-content: space-between;
+    }
+    #body3{
+        width:100%;
+        height:500px;
+        background-image: url(/body3.jpeg);
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 27px;
+        align-items: end;
+    }
+    #body3>button{
+        height:50px;
+        width:240px;
+        background-color: white;
+        color:rgb(154, 37, 154);
+        font-size:17px;
+        border:1px solid rgb(154, 37, 154);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    #body3>button:hover{
+        color:white;
+        background-color: rgb(77, 7, 7);
+    }
+    #body4>div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+    }
+    #body4>div:nth-child(2)>div{
+        width:23%;
+        height:500px;
+        border:1px solid grey;
+        padding: 10px;
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(1){
+        width:100%;
+        height:65%;
+        border:1px solid red;
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(2)>div{
+        margin-top: 10px;
+        height:110px;
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(2)>div>p{
+        font-size: 19px;
+        height:40px;
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(2)>div>h1{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height:50px;
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(2)>button{
+        width: 100%;
+        margin: auto;
+        height:50px;
+        border:1px solid brown;
+        color:brown;
+        font-size:17px;
+        /* font-weight: 600; */
+    }
+    #body4>div:nth-child(2)>div>div:nth-child(2)>button:hover{
+        color:white;
+        background-color: rgb(77, 7, 7);
+    }
+    #body5>div:nth-child(2){
+        width:100%;
+        height:700px;
+        border:1px solid red;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #body5>div:nth-child(2)>div{
+        /* margin: auto; */
+    }
+    #body5>div:nth-child(2)>div>button{
+        width: 40%;
+        margin: auto;
+        height:50px;
+        border:1px solid brown;
+        color:brown;
+        font-size:17px;
+    }
+    #body5>div:nth-child(2)>div:nth-child(1){
+        width:32%;
+        height:500px;
+        border:1px solid green;
+        border-radius: 10px;
+        background-image: url(https://staticimg.titan.co.in/Tanishq/Banners/home/newForYou/sparkling-avenues.jpg);
+    }
+    #body5>div:nth-child(2)>div:nth-child(2){
+        width:32%;
+        height:500px;
+        border:1px solid green;
+        border-radius: 10px;
+        background-image: url(https://staticimg.titan.co.in/Tanishq/Banners/home/newForYou/pretty-in-pink.jpg);
+    }
+    #body5>div:nth-child(2)>div:nth-child(3){
+        width:32%;
+        height:500px;
+        border:1px solid green;
+        border-radius: 10px;
+        background-image: url(https://staticimg.titan.co.in/Tanishq/Banners/home/newForYou/dotsanddashes.jpg);
+    }
+    @media screen and (max-width:1000px){
+        #navbar1>div{
+            width:100%;
+        }
+
+        #navbar1>div>div:nth-child(2){
+          
+            display: none;
+        }
+        #hidenav{
+            display: block;
+            display: flex;
+            align-items: center;
+            background-color: #f2e9e9;
+        }
+        #hidenav>div{
+        width:98%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+        margin: auto;
+    }
+    #hidenav>div>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #hidenav>div>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+
+   
+        #navbar1>div>div:nth-child(3){
+            width:30%;
+        }
+        #navbar2{
+            display:none;
+        }
+        #none{
+            display: block;
+            height:200px;
+            width:70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 20px;
+        }
+        #none>div{
+            height:90%;
+            width:32%;
+            border:1px solid rgb(197, 195, 195);
+            border-radius: 10px;
+            background-color: #f2e9e9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:brown;
+        }
+        #none>div>i{
+            font-size: 28px;
+        }
+        #none>div>p{
+            font-size: 28px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #homebody{
+            width:90%;
+        }
+        #body1>div:nth-child(2)>div{
+        width:32%;
+         }
+         #body1>div:nth-child(2)>div:nth-child(7){
+            display: none;
+         }
+         #body1>div:nth-child(2)>div:nth-child(8){
+            display: none;
+         }
+         #body1>div:nth-child(2)>div:nth-child(9){
+            display: none;
+         }
+         #body1>div:nth-child(2)>div:nth-child(10){
+            display: none;
+         }
+         #body1>div:nth-child(2)>div:nth-child(11){
+            display: none;
+         }
+         #body1>div:nth-child(2)>div:nth-child(12){
+            display: none;
+         }
+         #body2>div:nth-child(2){
+            flex-direction: column;
+         }
+         #body2>div:nth-child(2)>div{
+            width:100%;
+         }
+         #body2>div:nth-child(2)>div>div:nth-child(1){
+            height:90%;
+            border:1px solid green;
+         }
+         #body2>div:nth-child(2)>div>div:nth-child(2)>div:nth-child(2){
+            /* border:1px solid red; */
+            width:15%;
+         }
+         #body4{
+            margin-top: 20px;
+         }
+         #body4>div:nth-child(2)>div{
+            width:32%;
+         }
+         #body4>div:nth-child(2)>div:nth-child(4){
+            display: none;
+         }
+    }
+</style>
+<body>
+   <div id="screen">
+    <div id="navbar1">
+        <div>
+            <div>
+                <img src="./tanishq.svg"/>
+            </div>
+            <div class="nav">
+                <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+                <i class="fa-solid fa-camera"></i>
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <p>STORIES</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-user"></i>
+                        <p>ACCOUNT</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <p>WISHLIST</p></div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>CART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hidenav">
+        <div>
+            <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <div id="navbar2">
+        <div>
+            <div><p>ALL JWELLERY</p></div>
+            <div><p>GOLD</p></div>
+            <div><p>DIAMOND</p></div>
+            <div><p>EARRINGS</p></div>
+            <div><p>RINGS</p></div>
+            <div><p>MIA</p></div>
+            <div><p>COLLECTIONS</p></div>
+            <div><p>RIVAAH</p></div>
+            <div><p>GOLDEN HARVEST</p></div>
+            <div><p>CORPORATE GIFTING</p></div>
+            <div><p>MORE</p></div>
+        </div>
+    </div>
+   <div id="none">
+    <div>
+        <i class="fa-regular fa-calendar"></i>
+        <p>Book An Appointment</p>
+    </div>
+    <div>
+        <i class="fa-solid fa-video"></i>
+        <p>Live Video Calling</p>
+    </div>
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <p>WhatsApp Connect</p>
+    </div>
+   </div>
+    <div id="image">
+        <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/8658d49a-0b4f-4ef6-a28f-a3395aa083c4/tablet/stunning-ea-desktop.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-8658d49a-0b4f-4ef6-a28f-a3395aa083c4-desktop-otdjdcd&impolicy=pqmed"/>
+    </div>
+    <div id="homebody">
+        <div id="body1">
+           <div class="samehead">
+            <h1>Shop Jwellery By Category</h1>
+            <p>Browse through your favourite categories.We've got them all!</p>
+           </div>
+           <div>
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/GoldCoin.webp"/>
+                <p>Gold Coins</p>
+                <div id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/earrings-new.webp"/>
+                <p>Earrings</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/Pendant.webp"/>
+                <p>Pendants</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/Ring.webp"/>
+                <p>Fingure Rings</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/mangalsutras-new.webp"/>
+                <p>Mangalsutras</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/Neckwear.webp"/>
+                <p>Nechwear</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/CoupleRing.webp"/>
+                <p>Engagement Rings</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/Chain.webp"/>
+                <p>Chains</p>
+                <div>
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/Bangle.webp"/>
+                <p>Bangles</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/bracelets-new.webp"/>
+                <p>Bracelets</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/nosepins-new.webp"/>
+                <p>Nose Pins</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCategory/pendant-set-new.webp"/>
+                <p>Pendant Sets</p>
+                <div  id="hoverr">
+                    <p>Explore</p>
+                    <p>></p>
+                </div>
+            </div>
+
+
+           </div>
+        </div>
+        <div id="body2">
+             <div class="samehead">
+            <h1>Shop By Collection</h1>
+            <p>Whatever the occasion,we've got a beautiful piece of jwellery for you.</p>
+           </div>
+           <div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCollection/dor-new.jpg"/>
+                    </div>
+                    <div>
+                        <div id="hide">Dor</div>
+                        <div  id="hoverr2">
+                            <p>Explore More</p>
+                            <p>></p>
+                        </div>
+                    </div>
+                
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCollection/gold-coins.jpg"/>
+                    </div>
+                    <div>
+                        <div id="hide">Exclusive Coins</div>
+                        <div id="hoverr2">
+                            <p>Explore More</p>
+                            <p>></p>
+                        </div>
+                    </div>
+                </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Banners/home/ShopByCollection/stunning-ear-new.jpg"/>
+                </div>
+                    <div>
+                        <div id="hide">Stunning Every Year</div>
+                        <div id="hoverr2">
+                            <p>Explore More</p>
+                            <p>></p>
+                        </div>
+                    </div>
+            </div>
+           </div>
+        </div>
+        <div id="body3">
+            <button>Explore Now</button>
+        </div>
+        <div id="body4">
+            <div class="samehead">
+                <h1>Top Sellers</h1>
+                <p>Check out the Products that our customers love the most</p>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/512714PRIAAA00_1.jpg?impolicy=pqmed&imwidth=320"/>
+                    </div>
+                    <div>
+                       <div>
+                         <p>Surreal Modern Abstract Floral Gold Pendant</p>
+                        <h1>Rs.5813</h1>
+                    </div>
+                        <button>Explore</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/511072CSGAA00_1.jpg?impolicy=pqmed&imwidth=320"/>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Simple Gold Chain for Kids</p>
+                        <h1>Rs.18326</h1>
+                        </div>
+                        <button>Explore</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51T051FFMAA00_1.jpg?impolicy=pqmed&imwidth=320"/>
+                    </div>
+                    <div>
+                       <div>
+                        <p>Simplistic 22 Karat Yellow Gold Rhomboid Ring</p>
+                        <h1>Rs.4463</h1>
+                       </div>
+                        <button>Explore</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Mia/Catalog/512822SYYABE00_1.jpg?impolicy=pqmed&imwidth=320"/>
+                    </div>
+                    <div>
+                        <div>
+                            <p>22 KT Yellow Gold Artsy Stud Earrings</p>
+                        <h1>Rs.30604</h1>
+                        </div>
+                        <button>Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body5">
+            <div class="samehead">
+                <h1>New For You!</h1>
+                <p>Our latest realeases, just for you!</p>
+            </div>
+            <div>
+                <div>
+                    <button>Explore More</button>
+                </div>
+                <div>
+                    <button>Explore More</button>
+                </div>
+                <div>
+                    <button>Explore More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div> 
+</body>
+</html>
