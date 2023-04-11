@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+     <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #screen{
+            width:100%;
+            height:1000px;
+            /* border:1px solid red; */
+        }
+         #navbar1{
+        height:80px;
+        width:100%;
+        /* border:1px solid blue; */
+        background-color: #f2e9e9;
+    }
+    #navbar1>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        padding:10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(1){
+        width:10%;
+        height:100%;
+        /* border:1px solid red; */
+    }
+    #navbar1>div>div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #navbar1>div>div:nth-child(2){
+        width:60%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+    }
+    #navbar1>div>div:nth-child(2)>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #navbar1>div>div:nth-child(2)>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+    #navbar1>div>div:nth-child(3){
+        width:25%;
+        height:90%;
+        /* border:1px solid red; */
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(3)>div{
+        /* border:1px solid green; */
+        /* width:25%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:rgb(172, 98, 98);
+    }
+    #navbar1>div>div:nth-child(3)>div:hover{
+        color:rgb(119, 22, 22);
+    }
+    #navbar1>div>div:nth-child(3)>div>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #navbar1>div>div:nth-child(3)>div>div>i{
+        margin-bottom: 5px;
+    }
+    #hidenav{
+        height:60px;
+        width:100%;
+        /* border:1px solid red; */
+        display: none;
+    }
+     #navbar2{
+        height:65px;
+        width:100%;
+        box-shadow: 5px 10px 18px rgb(248, 245, 245);
+        /* border:1px solid green; */
+    }
+    #navbar2>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #navbar2>div>div{
+        /* border:1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+    #navbar2>div>div>p{
+        font-size: 18px;
+        color: rgb(83, 82, 82);
+    }
+    #navbar2>div>div>p:hover{
+        color:brown;
+    }
+    #navbar3{
+        height:65px;
+        width:100%;
+        /* border:1px solid green; */
+    }
+    #navbar3>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #navbar3>div>div>p{
+        font-weight:-100px;
+        color:brown
+    }
+    #navbar3>div>div>p>span>i{
+        margin-left: 10px;
+    }
+    #navbar4{
+        height:65px;
+        width:100%;
+        border:1px solid grey;
+    }
+    #navbar4>div{
+        width:60%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    #navbar4>div>div{
+        /* border:1px solid red; */
+        height:80%;
+        width:34%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 60px;
+        color:brown;
+        border-left: 1px solid grey;
+    }
+    #navbar4>div>div:nth-child(3){
+        border-right: 1px solid grey;
+    }
+    #navbar4>div>div>p>span>i{
+        margin-right: 20px;
+    }
+    #body{
+        /* height:1000px; */
+        width:85%;
+        border:1px solid red;
+        margin: auto;
+    }
+    #header{
+        width:100%;
+        /* height:150px; */
+        /* border:1px solid blue; */
+    }
+    #header>p:nth-child(1){
+        margin-top: 1%;
+        font-size: 18px;
+        margin-bottom: 1.5%;
+    }
+    #header>p:nth-child(1)>span{
+        color:brown
+    }
+    #header>p:nth-child(2)>span{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #header>p:nth-child(2){
+        font-size: 20px;
+        margin-bottom: 1.5%;
+    }
+    #header>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    #header>div>div:nth-child(1){
+        height:70px;
+        width:200px;
+        border:1px solid grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    #header>div>div:nth-child(1)>p{
+        color:grey;
+    }
+    #header>div>div:nth-child(1)>p>span{
+        color: brown;
+        margin-right: 10px;
+    }
+    #header>div>div:nth-child(2){
+        height:70px;
+        width:250px;
+        border:1px solid brown;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    #header>div>div:nth-child(2)>p{
+        color: brown;
+    }
+    #header>div>div:nth-child(2)>p>span{
+        color: rgb(240, 194, 194);
+        margin-left: 10px;
+    }
+    #bodyinfo{
+        margin-top: 40px;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* border:1px solid blue; */
+    }
+    #bodyinfo>div{
+        width:24%;
+        height:450px;
+        border:1px solid rgb(194, 192, 192);
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
+    #bodyinfo>div:hover{
+        box-shadow: 5px 10px 18px rgb(169, 168, 168);
+    }
+    #bodyinfo>div>div:nth-child(1){
+        height:300px;
+        width:100%;
+        border-bottom:2px solid grey;
+    }
+    #bodyinfo>div>div:nth-child(1)>img{
+        height:100%;
+        width:100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    #bodyinfo>div>div:nth-child(2){
+        height:150px;
+        width:100%;
+        /* border:1px solid gold; */
+        padding: 10px;
+    }
+    #bodyinfo>div>div:nth-child(2)>p:nth-child(1){
+        margin-top: 10px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    #bodyinfo>div>div:nth-child(2)>p:nth-child(2){
+        margin-top: 5px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    #bodyinfo>div>div:nth-child(2)>p:nth-child(3){
+        margin-top: 10px;
+    }
+    #bodyinfo>div>div:nth-child(2)>button{
+        width:100%;
+        height:35px;
+        margin-top: 10px;
+        background-color: white;
+        border:1px solid black;
+
+    }
+    #bodyinfo>div>div:nth-child(2)>button:hover{
+        background-color: brown;
+        color:white;
+        border: none;
+    }
+       @media screen and (max-width:1000px){
+        #navbar1>div{
+            width:100%;
+        }
+        #navbar1>div>div:nth-child(3)>div>div>i{
+            font-size: 30px;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(1)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(3)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(4)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(2){
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3){
+            justify-content: right;
+            /* border:1px solid green; */
+        }
+        #navbar1>div>div:nth-child(3)>div{
+            /* border:1px solid red; */
+            width:18%;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(2){
+            display: none;
+        }
+          #hidenav{
+            display: block;
+            display: flex;
+            align-items: center;
+            background-color: #f2e9e9;
+        }
+        #hidenav>div{
+        width:98%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+        margin: auto;
+    }
+    #hidenav>div>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #hidenav>div>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+          #navbar2{
+            display:none;
+        }
+        #navbar3{
+            display:none;
+        }
+        #navbar4{
+            display: none;
+        }
+        #header>p:nth-child(1){
+            display: none;
+        }
+        #header>div{
+            display: none;
+        }
+        #body{
+            margin-top: 20px;
+        }
+        #bodyinfo>div{
+            width:48%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="navbar1">
+        <div>
+            <div>
+                <img src="./tanishq.svg"/>
+            </div>
+            <div class="nav">
+                <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+                <i class="fa-solid fa-camera"></i>
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <p>STORIES</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-user"></i>
+                        <p>ACCOUNT</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <p>WISHLIST</p></div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>CART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="hidenav">
+        <div>
+            <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+     <div id="navbar2">
+        <div>
+            <div><p>ALL JWELLERY</p></div>
+            <div><p>GOLD</p></div>
+            <div><p>DIAMOND</p></div>
+            <div><p>EARRINGS</p></div>
+            <div><p>RINGS</p></div>
+            <div><p>MIA</p></div>
+            <div><p>COLLECTIONS</p></div>
+            <div><p>RIVAAH</p></div>
+            <div><p>GOLDEN HARVEST</p></div>
+            <div><p>CORPORATE GIFTING</p></div>
+            <div><p>MORE</p></div>
+        </div>
+    </div>
+    <div id="navbar3">
+        <div>
+            <div><p>PRICE<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            <div><p>JWELLERY TYPE<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            <div><p>PURITY<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            <div><p>BANGLES SIZE<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            <div><p>METAL COLOR<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            <div><p>PRODUCT device-width<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            <div><p>SEE MORE FILTERS<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+        </div>
+    </div>
+    <div id="navbar4">
+        <div>
+            <div><p><span><i class="fa-solid fa-house"></i></span>STORE LOCATOR</p></div>
+            <div><p><span><i class="fa-solid fa-check"></i></span>BOOK AN APPOINMENT</p></div>
+            <div><p><span><i class="fa-solid fa-video"></i></span>LIVE VIDEO CALL</p></div>
+        </div>
+    </div>
+    <div id="body">
+        <div id="header">
+            <p>Home <span>| Bangles</span></p>
+            <p><span>Bangles</span> | 89 DESIGNS</p>
+            <div>
+                <div><p><span><i class="fa-solid fa-arrows-rotate"></i></span>COMPARE</p></div>
+                <div><p>SORT BY : BEST SELLERS<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
+            </div>
+        </div>
+        <div id="bodyinfo">
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500452VHABA12_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Tiana Ruby Bangle</p>
+                    <p>Rs.48232</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+                
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500281VBABAPL_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Elegant Pearl Bangle</p>
+                    <p>Rs.78598</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Leia Garnet Bangle</p>
+                    <p>Rs.61798</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/502880VBZ1A12_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Sophisticated Gold Bangle</p>
+                    <p>Rs.79668</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51D3B1VOW1A40_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Exquisite Vibrant Ruby Bangle</p>
+                    <p>Rs.94989</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/502880VBY1A12_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Classical Gold Bangle</p>
+                    <p>Rs.86529</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/502880VCD1A40_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>State-of-the-art Gold Bangle</p>
+                    <p>Rs.63979</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/502880VBW1A11_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Minimalistic Emerald Bangle</p>
+                    <p>Rs.78679</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/502880VBV1A12_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Dainty Ruby Bangle</p>
+                    <p>Rs.49523</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/513318VAP1A40_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Opulent Emerald And Ruby Bangle</p>
+                    <p>Rs.145070</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51D1D2VGI2A17_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Graceful Emrald Gold Bangle</p>
+                    <p>Rs.301306</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51D1D2VGL2A40_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Sapphire Gold Bangle</p>
+                    <p>Rs.237280</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51D1D2VGO2A18_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Classy Ruby Gold Bangle</p>
+                    <p>Rs.204426</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51W1D1VJY1A88_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Glammorous cubic Gold Bangle</p>
+                    <p>Rs.148326</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51W1D1VJZ1A88_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Enchanting cubic Gold Bangle</p>
+                    <p>Rs.162236</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51W1D1VKA1A88_1.jpg?impolicy=pqmed&imwidth=640"/>
+                </div>
+                <div>
+                    <p>Spellbinding Cubic Gold Bangle</p>
+                    <p>Rs.151465</p>
+                    <p>Women | Bangle</p>
+                    <button>EXplore Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+
