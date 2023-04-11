@@ -184,7 +184,7 @@
     #body{
         /* height:1000px; */
         width:85%;
-        border:1px solid red;
+        /* border:1px solid red; */
         margin: auto;
     }
     #header{
@@ -305,6 +305,51 @@
         color:white;
         border: none;
     }
+
+    #footer{
+            height:400px;
+            width:100%;
+            background-color:#f2e9e9;
+            display: flex;
+            align-items:end;
+            justify-content:center;
+        }
+        #footer>div{
+            width:80%;
+            height:90%;
+            /* border:1px solid gold; */
+        }
+        #footer>div>div:nth-child(1){
+            height:60%;
+            width:100%;
+            /* border-bottom:1px solid grey; */
+            display: flex;
+        }
+        #footer>div>div:nth-child(1)>div{
+            width:25%;
+            height:100%;
+            /* border:1px solid red; */
+            color:white;
+        }
+        #footer>div>div:nth-child(1)>div>h4{
+            color:brown;
+            font-size: 20px;
+            margin-bottom: 10%;
+        }
+        #footer>div>div:nth-child(1)>div>p{
+            font-size: 20px;
+            margin-top: 6%;
+            color:black
+
+        }
+        #footer>div>div:nth-child(1)>div:nth-child(4)>img{
+            border:2px solid grey;
+            width:70%;
+            height:25%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+       
        @media screen and (max-width:1000px){
         #navbar1>div{
             width:100%;
@@ -662,6 +707,40 @@
             </div>
         </div>
     </div>
+
+    <div id="footer">
+        <div>
+         <div>
+             <div>
+                 <h4>USeful Links</h4>
+                 <p>Delivery Information</p>
+                 <p>International Shipping</p>
+                 <p>Payment Options</p>
+                 <p>Track Your Order</p>
+                 <p>Returns</p>
+                 <p>Find a Store</p>
+             </div>
+             <div>
+                 <h4>Information</h4>
+                 <p>Careers</p>
+                 <p>Blog</p>
+                 <p>Offers & Contest Details</p>
+                 <p>Help & FAQS</p>
+                 <p>About Tanishq</p>
+             </div>
+             <div>
+                 <h4>Contact Us</h4>
+                 <p>Write to Us</p>
+                 <p>1800-266-0123</p>
+                 <p>Chat With US</p>
+             </div>
+             <div>
+                 <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/play_ip0jfp"/>
+                 <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/iOS_ajgrty"/>
+             </div>
+         </div>
+        </div>
+     </div>
     </div>
 </body>
 </html>
