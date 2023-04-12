@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single-product</title>
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #screen{
+            width:100%;
+            /* height:1000px; */
+            border:1px solid red;
+        }
+        #navbar1{
+        height:80px;
+        width:100%;
+        /* border:1px solid blue; */
+        background-color: #f2e9e9;
+    }
+    #navbar1>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        padding:10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(1){
+        width:10%;
+        height:100%;
+        /* border:1px solid red; */
+    }
+    #navbar1>div>div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #navbar1>div>div:nth-child(2){
+        width:60%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+    }
+    #navbar1>div>div:nth-child(2)>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #navbar1>div>div:nth-child(2)>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+    #navbar1>div>div:nth-child(3){
+        width:25%;
+        height:90%;
+        /* border:1px solid red; */
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(3)>div{
+        /* border:1px solid green; */
+        /* width:25%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:rgb(123, 29, 29);
+    }
+    #navbar1>div>div:nth-child(3)>div>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #navbar1>div>div:nth-child(3)>div>div>i{
+        margin-bottom: 5px;
+    }
+    #hidenav{
+        height:60px;
+        width:100%;
+        /* border:1px solid red; */
+        display: none;
+    }
+    #navbar2{
+        height:65px;
+        width:100%;
+        /* border:1px solid green; */
+    }
+    #navbar2>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #navbar2>div>div{
+        /* border:1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+    #navbar2>div>div>p{
+        font-size: 18px;
+        color: rgb(83, 82, 82);
+    }
+    #navbar2>div>div>p:hover{
+        color:brown;
+    }
+    #body{
+        width:90%;
+        /* height:1000px; */
+        border:1px solid red;
+        margin: auto;
+        display: flex;
+    }
+    #left{
+        width:50%;
+        /* height:500px; */
+        border:1px solid gold;
+        display: flex;
+        flex-direction: column;
+    }
+    #left>p:nth-child(1){
+        height:80px;
+        /* border:1px solid red; */
+        padding-top: 30px;
+        font-size: 17px;
+    }
+    #left>p:nth-child(1)>span{
+        color:rgb(141, 36, 36);
+        font-weight: bold;
+    }
+    #left>div:nth-child(2){
+        width: 100%;
+        height:450px;
+        /* border:1px solid blue; */
+        display: flex;
+    }
+    #left>div:nth-child(2)>div:nth-child(1){
+        width:20%;
+        height:100%;
+        /* border:1px solid red; */
+    }
+    #left>div:nth-child(2)>div:nth-child(2){
+        width:80%;
+        height:100%;
+        /* border:1px solid red; */
+        display: flex;
+        justify-content: right;
+    }
+    #left>div:nth-child(2)>div:nth-child(2)>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid blue; */
+    }
+    #left>div:nth-child(2)>div:nth-child(2)>div>img{
+        width:100%;
+        height:100%;
+    }
+    #left>div:nth-child(2)>div:nth-child(1)>div{
+        width:100%;
+        height:27%;
+        border:1px solid brown;
+        margin-bottom: 40px;
+    }
+    #left>div:nth-child(2)>div:nth-child(1)>div>img{
+        width:100%;
+        height:100%;
+    }
+    #right{
+        width:50%;
+        /* height:800px; */
+        border:1px solid gold;
+        display: flex;
+        justify-content: center;
+    }
+    #right>div{
+        height:800px;
+        width:80%;
+        /* border:1px solid red; */
+    }
+    #right1{
+        height:110px;
+        width:100%;
+        /* border:1px solid green; */
+        padding-top: 20px;
+        border-bottom: 1px solid rgb(221, 218, 218);
+    }
+    #right1>p:nth-child(2){
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+    #right1>p:nth-child(3){
+        color:rgb(79, 77, 77);
+        margin-bottom: 10px;
+    }
+    #right2{
+        width:100%;
+        /* border:1px solid purple; */
+        border-bottom: 1px solid rgb(205, 202, 202);
+    }
+    #right11{
+        margin-top: 5px;
+        font-size: 16px;
+        color:rgb(69, 68, 68);
+        margin-bottom: 15px;
+    }
+    #right12{
+        height:70px;
+        width:100%;
+        /* border:1px solid red; */
+    }
+     #right12>p:nth-child(1){
+        font-weight: bold;
+     }
+     #right12>p:nth-child(1)>span{
+        font-size: 25px;
+     }
+     #right12>p:nth-child(2)>span{
+        color:brown
+     }
+      #right13{
+        height:100px;
+        width:100%;
+        /* border:1px solid red; */
+    }
+    #right13>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    #right13>div>div{
+        height:70px;
+        width:30%;
+        /* border:1px solid red; */
+    }
+    #right13>div>div>p{
+        font-weight: bold;
+        font-size: 17px;
+        color:rgb(35, 34, 34);
+    }
+     #right13>div>div>button{
+        width:100%;
+        height:45px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border:1px solid grey;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: white;
+     }
+     #right13>div>div:nth-child(3)>p:nth-child(1){
+        text-align: center;
+     }
+     #right13>div>div:nth-child(3)>p:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid green; */
+        width: 80%;
+        height:30px;
+        font-size: 25px;
+        margin-top: 10px;
+     }
+     #right13>div>div:nth-child(3){
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+     }
+     #right13>div>div:nth-child(3)>p:nth-child(2)>span{
+        font-size: 30px;
+        color:rgb(196, 192, 192);
+     }
+     #right13>p{
+        margin-top: 5px;
+     }
+     #right13>p>span{
+        color: brown;
+     }
+     #right14{
+        height:50px;
+        width:100%;
+        /* border:1px solid blue; */
+        margin-top: 10px;
+     }
+     #right14>p:nth-child(1){
+        font-weight: bold;
+     }
+     #right14>p:nth-child(2)>span{
+        color:brown;
+     }
+     #right15{
+        height:80px;
+        width:100%;
+        /* border:1px solid green; */
+        display: flex;
+        justify-content: space-between;
+     }
+     #right15>button{
+        width:47%;
+        height:50px;
+        font-size: 20px;
+        font-weight: bold;
+     }
+     #right15>button:nth-child(1){
+        background-color: white;
+        border:1px solid black;
+     }
+     #right15>button:nth-child(2){
+        background-color: #832729;
+        border:none;
+        color: white;
+     }
+     #right3{
+        height:80px;
+        width:100%;
+        /* border:1px solid grey; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(201, 199, 199);
+     }
+     #right3>div{
+        height:40px;
+        width:45%;
+        border:1px solid grey;
+        padding: 10px;
+        border-radius: 10px;
+     }
+     #right3>div:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     #right3>div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     #right3>div:nth-child(2)>p:nth-child(1)>span{
+        margin-right: 5px;
+     }
+     #right4{
+        /* height:400px; */
+        width:100%;
+        /* border:1px solid red; */
+     }
+     #right4>div:nth-child(1){
+        height:80px;
+        width:100%;
+        /* border:1px solid green; */
+        padding-top: 5px;
+     }
+     #right4>div:nth-child(1)>p{
+        font-size: 15px;
+        color:rgb(69, 68, 68);
+        margin-bottom: 3px;
+     }
+     #right5{
+        height:160px;
+        width:100%;
+        /* border:1px solid blue; */
+        border-bottom: 1px solid rgb(181, 179, 179);
+     }
+     #right5>p:nth-child(1){
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px;
+     }
+     #right5>p:nth-child(2){
+        font-size: 15px;
+        color:rgb(95, 95, 95);
+        margin-bottom: 15px;
+     }
+     #right5>button{
+        width:100%;
+        height:50px;
+        background-color: white;
+        border:1px solid rgb(187, 185, 185);
+        border-radius: 10px;
+        font-size: 20px;
+        color:rgb(66, 65, 65);
+     }
+     #bodyimage{
+        width:100%;
+        height:600px;
+        /* border:1px solid red; */
+        margin-top: 20px;
+     }
+     #bodyimage>img{
+        width:100%;
+        height:100%;
+     }
+     #body2{
+        width:90%;
+        height:300px;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        margin-top: 30px;
+        border-bottom: 1px solid grey;
+     }
+     #body2>div{
+        width:50%;
+        height:100%;
+        /* border:1px solid blue; */
+     }
+     #body2>div:nth-child(1){
+        height:200px;
+        width: 100%;
+        /* border:1px solid red; */
+     }
+     #body2>div:nth-child(1)>div:nth-child(1){
+        height:40px;
+        width:100%;
+        /* border:1px solid grey; */
+        border-bottom: 1px solid grey;
+     }
+     #body2>div:nth-child(1)>div:nth-child(1)>h1{
+        font-size: 25px;
+     }
+     #body2>div:nth-child(1)>p:nth-child(2){
+        margin-top: 10px;
+        font-size: 15px;
+        color:rgb(83, 82, 82);
+        margin-bottom: 20px;
+     }
+     #body2>div:nth-child(1)>p:nth-child(3){
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+     }
+     #body2>div:nth-child(1)>div:nth-child(4)>p>span{
+        font-weight: bold;
+        color:black;
+     }
+     #body2>div:nth-child(1)>div:nth-child(4)>p{
+        color:grey;
+        margin-bottom: 8px;
+     }
+     #body2>div:nth-child(2){
+        display: flex;
+        justify-content: center;
+     }
+     #body2>div:nth-child(2)>img{
+        height:100%;
+        width:80%;
+     }
+     #body3{
+        height:200px;
+        width:100%;
+        border:1px solid red;
+     }
+    @media screen and (max-width:1000px){
+        #navbar1>div{
+            width:100%;
+        }
+        #navbar1>div>div:nth-child(3)>div>div>i{
+            font-size: 30px;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(1)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(3)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(4)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(2){
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3){
+            justify-content: right;
+            /* border:1px solid green; */
+        }
+        #navbar1>div>div:nth-child(3)>div{
+            /* border:1px solid red; */
+            width:18%;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(2){
+            display: none;
+        }
+        #hidenav{
+            display: block;
+            display: flex;
+            align-items: center;
+            background-color: #f2e9e9;
+        }
+        #hidenav>div{
+        width:98%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+        margin: auto;
+    }
+    #hidenav>div>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #hidenav>div>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+    #navbar1>div>div:nth-child(3){
+            width:30%;
+        }
+        #navbar2{
+            display:none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="navbar1">
+            <div>
+                <div>
+                    <img src="./tanishq.svg"/>
+                </div>
+                <div class="nav">
+                    <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-microphone"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-house"></i>
+                            <p>STORIES</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-regular fa-user"></i>
+                            <p>ACCOUNT</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                            <p>WISHLIST</p></div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>CART</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hidenav">
+            <div>
+                <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+                <i class="fa-solid fa-camera"></i>
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div id="navbar2">
+            <div>
+                <div><p>ALL JWELLERY</p></div>
+                <div><p>GOLD</p></div>
+                <div><p>DIAMOND</p></div>
+                <div><p>EARRINGS</p></div>
+                <div><p>RINGS</p></div>
+                <div><p>MIA</p></div>
+                <div><p>COLLECTIONS</p></div>
+                <div><p>RIVAAH</p></div>
+                <div><p>GOLDEN HARVEST</p></div>
+                <div><p>CORPORATE GIFTING</p></div>
+                <div><p>MORE</p></div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="left">
+                <p>Home | Gold Bangles | <span>Leia Garnet Bangle</span></p>
+                <div>
+                    <div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31.jpg"/>
+                        </div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31_1.jpg"/>
+                        </div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31_2.jpg"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <div id="right1">
+                        <p>500481VBAABA312JA507023</p>
+                        <p>Leia Garnet Bangle</p>
+                        <p><span><i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i></span>Write a review</p>
+                    </div>
+                    <div id="right2">
+                        <div id="right11">
+                            <p>Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets</p>
+                        </div>
+                        <div id="right12">
+                            <p>Price <span>Rs.61 664,00</span></p>
+                            <p>Price inclusive of all taxes.See full <span>Price Breakup</span></p>
+                        </div>
+                        <div id="right13">
+                            <div>
+                                <div>
+                                    <p>Size</p>
+                                    <button>45*55 mm</button>
+                                </div>
+                                <div>
+                                    <p>Gross Weight</p>
+                                    <button>11.083 g</button>
+                                </div>
+                                <div>
+                                    <p>Qty</p>
+                                    <p><span><i class="fa-solid fa-circle-minus"></i></span>1N<span><i class="fa-solid fa-circle-plus"></i></span></p>
+                                </div>
+                            </div>
+                            <p>Weight will increase as per the Size. Check <span>Sizing comparison</span></p>
+                        </div>
+                        <div id="right14">
+                            <p>Gold Purity : 18.00 Karat</p>
+                            <p>Not sure what to buy? Checkout our <span>Buying Guides</span></p>
+                        </div>
+                        <div id="right15">
+                            <button>Add To Cart</button>
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                    <div id="right3">
+                        <div>
+                            <p>India</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div>
+                            <p><span><i class="fa-solid fa-location-dot"></i></span>Pincode</p>
+                            <p>Check</p>
+                        </div>
+                    </div>
+                    <div id="right4">
+                        <div>
+                            <p>Purity Guarranted</p>
+                            <p>Easy Returns</p>
+                            <p>Free Shipping across India</p>
+                        </div>
+                        <div id="right5">
+                        <p>Still Confused What to Buy?</p>
+                        <p>Get on live video call with our design experts, or visit your nearest Tanishq store to get an closer look and know more about the product.</p>
+                        <button>Talk to an Expert</button>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="bodyimage">
+            <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/d1f34107-0514-42d9-9905-ce94f32695d2/desktop/safeD.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-d1f34107-0514-42d9-9905-ce94f32695d2-desktop-o8BE4jn"/>
+        </div>
+        <div id="body2">
+            <div>
+                <div>
+                    <h1>Product Details</h1>
+                </div>
+                <p>Little garnet periwinkles adorn this dainty design. Embrace the Charm of Flowers and the Marvel of Sparkling stones with this bangle as your accessory.</p>
+                <p>Specifications</p>
+                <div>
+                    <p><span>Metal color: </span>Yellow</p>
+                    <p><span>Occasion: </span>Modern Wear</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31_1.jpg"/>
+            </div>
+        </div>
+        <div id="body3">
+
+        </div>
+    </div>
+</body>
+</html>
