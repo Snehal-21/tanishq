@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    #screen{
+        width:100%;
+        height:1000px;
+        /* border:1px solid red; */
+    }
+    *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #screen{
+            width:100%;
+            /* height:1000px; */
+            /* border:1px solid red; */
+        }
+        #navbar1{
+        height:80px;
+        width:100%;
+        /* border:1px solid blue; */
+        background-color: #f2e9e9;
+    }
+    #navbar1>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        padding:10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(1){
+        width:10%;
+        height:100%;
+        /* border:1px solid red; */
+    }
+    #navbar1>div>div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #navbar1>div>div:nth-child(2){
+        width:60%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+    }
+    #navbar1>div>div:nth-child(2)>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #navbar1>div>div:nth-child(2)>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+    #navbar1>div>div:nth-child(3){
+        width:25%;
+        height:90%;
+        /* border:1px solid red; */
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar1>div>div:nth-child(3)>div{
+        /* border:1px solid green; */
+        /* width:25%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:rgb(123, 29, 29);
+    }
+    #navbar1>div>div:nth-child(3)>div>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #navbar1>div>div:nth-child(3)>div>div>i{
+        margin-bottom: 5px;
+    }
+    #hidenav{
+        height:60px;
+        width:100%;
+        /* border:1px solid red; */
+        display: none;
+    }
+    #navbar2{
+        height:65px;
+        width:100%;
+        /* border:1px solid green; */
+    }
+    #navbar2>div{
+        width:85%;
+        height:100%;
+        /* border:1px solid red; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #navbar2>div>div{
+        /* border:1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+    #navbar2>div>div>p{
+        font-size: 18px;
+        color: rgb(83, 82, 82);
+    }
+    #navbar2>div>div>p:hover{
+        color:brown;
+    }
+    #body{
+        width: 90%;
+        height:1000px;
+        border:1px solid red;
+        margin:auto;
+        display: flex;
+    }
+    #left{
+        height:800px;
+        width:70%;
+        /* border:1px solid blue; */
+    }
+    #right{
+        height:500px;
+        width:30%;
+        border:1px solid blue;
+    }
+    #left1{
+        height:100px;
+        width:100%;
+        /* border:1px solid green; */
+        padding-top: 35px;
+    }
+    #left1>p{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    #left1>p>span{
+        color:brown;
+    }
+    #left2{
+        height:900px;
+        width:100%;
+        /* border:1px solid gold; */
+    }
+     #left2>div{
+        height:33%;
+        width:100%;
+        /* border:1px solid green; */
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgb(175, 171, 171);
+     }
+      #left2>div>div:nth-child(1){
+        width:23%;
+        height:100%;
+        /* border:1px solid red; */
+      }
+      #left2>div>div:nth-child(1)>img{
+        width:100%;
+        height:75%;
+        /* border:1px solid green; */
+        border-radius: 10px;
+      }
+       #left2>div>div:nth-child(2){
+        width:72%;
+        height:100%;
+        /* border:1px solid red; */
+      }
+       #left2>div>div:nth-child(2)>div:nth-child(1){
+        height:100px;
+        width:100%;
+        /* border:1px solid purple; */
+        display: flex;
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(1){
+        color:brown;
+        font-weight: bold;
+        margin-bottom: 3px;
+        font-size: 25px;
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(2){
+        color:grey;
+        margin-bottom: 10px;
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(3){
+        font-weight: bold;
+        font-size:25px;
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+        width:70%;
+        height:100%;
+        /* border:1px solid green; */
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2){
+        width:30%;
+        height:100%;
+        /* border:1px solid blue; */
+        display: flex;
+        justify-content: center;
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p{
+        font-size: 25px;
+       }
+       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p>span{
+        color:rgb(199, 196, 196);
+       }
+        #left2>div>div:nth-child(2)>div:nth-child(2){
+            height:50px;
+            width:100%;
+            /* border:1px solid purple; */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 90px;
+            align-items: center;
+        }
+         #left2>div>div:nth-child(2)>div:nth-child(2)>p{
+            width:25%;
+            /* border:1px solid red; */
+            color:brown;
+         }
+         #left2>div>div:nth-child(2)>div:nth-child(2)>p>span{
+            font-size: 20px;
+            margin-right: 10px;
+         }
+         #left2>div>div:nth-child(2)>div:nth-child(2)>div{
+            width:20%;
+            /* border:1px solid red; */
+         }
+         #left2>div>div:nth-child(2)>div:nth-child(2)>div>i{
+            font-size: 25px;
+            color:brown;
+            margin-right: 20px;
+         }
+
+
+
+    @media screen and (max-width:1000px){
+        #navbar1>div{
+            width:100%;
+        }
+        #navbar1>div>div:nth-child(3)>div>div>i{
+            font-size: 30px;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(1)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(3)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(4)>div>p{
+            display: none;
+        }
+        #navbar1>div>div:nth-child(2){
+            display: none;
+        }
+        #navbar1>div>div:nth-child(3){
+            justify-content: right;
+            /* border:1px solid green; */
+        }
+        #navbar1>div>div:nth-child(3)>div{
+            /* border:1px solid red; */
+            width:18%;
+        }
+        #navbar1>div>div:nth-child(3)>div:nth-child(2){
+            display: none;
+        }
+        #hidenav{
+            display: block;
+            display: flex;
+            align-items: center;
+            background-color: #f2e9e9;
+        }
+        #hidenav>div{
+        width:98%;
+        height:80%;
+        /* border:1px solid red; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        background-color: white;
+        margin: auto;
+    }
+    #hidenav>div>input{
+        width:87%;
+        height:90%;
+        padding:10px;
+        border: none;
+    }
+    #hidenav>div>i{
+        width:3%;
+        /* height:100%; */
+        /* border:1px solid green; */
+        font-size: 20px;
+        margin-right: 10px;
+        color:brown;
+        /* margin-bottom: 10px; */
+    }
+    #navbar1>div>div:nth-child(3){
+            width:30%;
+        }
+        #navbar2{
+            display:none;
+        }
+    }
+</style>
+<body>
+    <div id="screen">
+        <div id="navbar1">
+            <div>
+                <div>
+                    <img src="./tanishq.svg"/>
+                </div>
+                <div class="nav">
+                    <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-microphone"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-house"></i>
+                            <p>STORIES</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-regular fa-user"></i>
+                            <p>ACCOUNT</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                            <p>WISHLIST</p></div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>CART</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hidenav">
+            <div>
+                <input placeholder="Search for Gold Jwellery, Diamond Jwellery and more..."/>
+                <i class="fa-solid fa-camera"></i>
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div id="navbar2">
+            <div>
+                <div><p>ALL JWELLERY</p></div>
+                <div><p>GOLD</p></div>
+                <div><p>DIAMOND</p></div>
+                <div><p>EARRINGS</p></div>
+                <div><p>RINGS</p></div>
+                <div><p>MIA</p></div>
+                <div><p>COLLECTIONS</p></div>
+                <div><p>RIVAAH</p></div>
+                <div><p>GOLDEN HARVEST</p></div>
+                <div><p>CORPORATE GIFTING</p></div>
+                <div><p>MORE</p></div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="left">
+                <div id="left1">
+                    <p><span><u>Register</u> / <u>Login</u></span> to get Exciting offers &</p>
+                    <p> benefits on your <span>Encircle Points!</span></p>
+                </div>
+                <div id="left2">
+                    <div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31.jpg"/>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <p>Leia Garnet Bangle</p>
+                                    <p>500481VBAABA312JA506842</p>
+                                    <p>Rs.49686</p>
+                                </div>
+                                <div>
+                                    <p><span><i class="fa-solid fa-circle-minus"></i></span> 1 <span><i class="fa-solid fa-circle-plus"></i></span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><span><i class="fa-regular fa-square"></i></span>Add Gift Message</p>
+                                <div>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPVDI1AP3.jpg"/>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <p>Traditional Grand Gold Bangle</p>
+                                    <p>5101PPVDIAP32EB000145</p>
+                                    <p>Rs.157004</p>
+                                </div>
+                                <div>
+                                    <p><span><i class="fa-solid fa-circle-minus"></i></span> 1 <span><i class="fa-solid fa-circle-plus"></i></span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><span><i class="fa-regular fa-square"></i></span>Add Gift Message</p>
+                                <div>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/503820VCL1AP1.jpg"/>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <p>Enticing Gold Bangle</p>
+                                    <p>503820VCLE1AP12EA000125</p>
+                                    <p>Rs.49686</p>
+                                </div>
+                                <div>
+                                    <p><span><i class="fa-solid fa-circle-minus"></i></span> 1 <span><i class="fa-solid fa-circle-plus"></i></span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><span><i class="fa-regular fa-square"></i></span>Add Gift Message</p>
+                                <div>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+            <div id="right">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
