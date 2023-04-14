@@ -139,7 +139,7 @@
     #body{
         width: 90%;
         /* height:1000px; */
-        border:1px solid red;
+        /* border:1px solid red; */
         margin:auto;
         display: flex;
         justify-content: space-between;
@@ -151,7 +151,8 @@
     }
     #left1{
         height:100px;
-        width:100%;
+        width:90%;
+        margin: auto;
         /* border:1px solid green; */
         padding-top: 35px;
     }
@@ -351,6 +352,7 @@
             color: white;
             font-weight: bold;
             border-radius: 5px;
+            border: none;
         }
         #right>div:nth-child(2)>p{
             font-weight: bold;
@@ -517,6 +519,8 @@
         #body{
             flex-direction: column-reverse;
              /* margin-top: 300px; */
+             /* border:1px solid red; */
+             padding-top:-20px
         }
         #right{
             width:80%;
@@ -527,6 +531,17 @@
             width:80%;
             margin: auto;
             /* margin-top: 300px; */
+        }
+        #left1{
+            width:70%;
+            margin: auto;
+            /* border:1px solid red; */
+        }
+        #left2{
+            margin-top: 20px;
+        }
+        #right>div:nth-child(1){
+            margin-top:20px;
         }
     }
 </style>
@@ -593,12 +608,14 @@
                 <div><p>MORE</p></div>
             </div>
         </div>
+        <div id="left1">
+            <p><span><u>Register</u> / <u>Login</u></span> to get Exciting offers &</p>
+            <p> benefits on your <span>Encircle Points!</span></p>
+        </div>
         <div id="body">
+           
             <div id="left">
-                <div id="left1">
-                    <p><span><u>Register</u> / <u>Login</u></span> to get Exciting offers &</p>
-                    <p> benefits on your <span>Encircle Points!</span></p>
-                </div>
+                
                 <div id="left2">
                     <div>
                         <div>
