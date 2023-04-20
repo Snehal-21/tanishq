@@ -56,7 +56,7 @@ function login(event){
     var loginuser={}
     if(lemail && lpassword){
         var tanishq=JSON.parse(localStorage.getItem("tanishqusers"));
-        flag=false;
+       var flag=false;
         for(var i=0;i<tanishq.length;i++){
             if(tanishq[i].uemail==lemail && tanishq[i].upassword==lpassword){
                 flag=true;
