@@ -42,21 +42,32 @@
             flex-direction: column;
             margin-top: 50px;
         }
-        #body>div:nth-child(1)>div:nth-child(2)>div{
+        #body>div:nth-child(1)>div:nth-child(2)>form>div{
             height:50px;
             width:100%;
-            border-top:1px solid brown;
-            border-left: 1px solid brown;
-            border-right: 1px solid brown;
+            border:1px solid brown;
+            border-radius:10px;
+            margin-bottom: 10px;
         }
-        #body>div:nth-child(1)>div:nth-child(2)>div:nth-child(4){
-            border-bottom: 1px solid brown;
-        }
-        #body>div:nth-child(1)>div:nth-child(2)>div>input{
+        #body>div:nth-child(1)>div:nth-child(2)>form>div>input{
             height:100%;
             width:100%;
             border: none;
             padding-left: 20px;
+            border-radius: 10px;
+            caret-color: brown;
+        }
+        #body>div:nth-child(1)>div:nth-child(2)>form>div:nth-child(5){
+            width:50%;
+            margin: auto;
+            background-color: brown;
+            color:white;
+        }
+        #body>div:nth-child(1)>div:nth-child(2)>form>div:nth-child(5)>input{
+            background-color: brown;
+            color:white;
+            font-weight: bold;
+            font-size: 18px;
         }
         #body>div:nth-child(1)>div:nth-child(3){
             display: flex;
@@ -75,7 +86,7 @@
         #body>div:nth-child(1)>p>span{
             color:brown;
         }
-        #body>div:nth-child(1)>button{
+        /* #body>div:nth-child(1)>button{
             margin-top: 80px;
             height:45px;
             width:140px;
@@ -85,11 +96,11 @@
             border: none;
             font-weight: bold;
             font-size: 18px;
-        }
+        } */
         #body>div:nth-child(2){
             width:30%;
             height:100%;
-            /* border:1px solid green; */
+            border:1px solid green;
         }
         #body>div:nth-child(2)>img{
             width:100%;
@@ -114,22 +125,26 @@
             <div>
                 <h1>Signup</h1>
                 <div>
-                    <div> <input type="text" placeholder="Enter Name"/></div>
-                    <div><input type="number" placeholder="Enter Mobile Number"/></div>
-                  <div> <input type="email" placeholder="Enter Email Address"/></div>
-                  <div> <input type="password" placeholder="Enter Password"/></div>
+                    <form onsubmit="register(event)">
+                        <div> <input id="tname" type="text" placeholder="Enter Name"/></div>
+                    <div><input id="temail" type="email" placeholder="Enter Email"/></div>
+                  <div> <input id="tpassword" type="password" placeholder="Enter Password"/></div>
+                  <div> <input id="tconfirmpassword" type="password" placeholder="Enter Confirm Password"/></div>
+                  <div><input type="submit" value="Signup"/></div>
+                    </form>
                 </div>
                 <div>
                     <input type="checkbox" checked/>
                     <p>Remember Me</p>
                 </div>
                 <p>By continuing, I agree to <span><u>Terms of use</u></span> & <span><u>Privacy Policcy</u></span></p>
-                <button>Sign Up</button>
+                <!-- <button>Sign Up</button> -->
             </div>
             <div>
                 <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/a174d444-2b49-4ed2-9e28-d29a4e52165d/desktop/7.png?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-a174d444-2b49-4ed2-9e28-d29a4e52165d-desktop-o2OWQtw"/>
             </div>
         </div>
     </div>
+    <script src="./server.js"></script>
 </body>
 </html>
