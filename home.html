@@ -697,7 +697,7 @@
         #navbar1>div>div:nth-child(3)>div>div>i{
             font-size: 30px;
         }
-        #navbar1>div>div:nth-child(3)>div:nth-child(1)>div>p{
+        #navbar1>div>div:nth-child(3)>div:nth-child(2)>div>p{
             display: none;
         }
         #navbar1>div>div:nth-child(3)>div:nth-child(3)>div>p{
@@ -717,7 +717,7 @@
             /* border:1px solid red; */
             width:18%;
         }
-        #navbar1>div>div:nth-child(3)>div:nth-child(2){
+        #navbar1>div>div:nth-child(3)>div:nth-child(1){
             display: none;
         }
         #hidenav{
@@ -939,7 +939,7 @@
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div id="switch">
                         <i class="fa-regular fa-user"></i>
                         <p>ACCOUNT</p>
                     </div>
@@ -1404,5 +1404,23 @@
         </div>
      </div>
    </div> 
+
+   <script>
+    window.onload=function(){
+        // alert("working")
+
+        var loginuser=JSON.parse(localStorage.getItem("tanishqlogin"))
+        // console.log(loginuser)
+        if(!!loginuser){
+            var divforhtml=document.getElementById("switch");
+            var name=`<h1>${loginuser.uname}</h1>`;
+            // console.log(name)
+            divforhtml.innerHTML=name;
+        }
+        else{
+            alert("login user abscent")
+        }
+    }
+   </script>
 </body>
 </html>

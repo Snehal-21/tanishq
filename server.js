@@ -60,12 +60,13 @@ function login(event){
         for(var i=0;i<tanishq.length;i++){
             if(tanishq[i].uemail==lemail && tanishq[i].upassword==lpassword){
                 flag=true;
+                loginuser=tanishq[i];
             }
         }
         if(flag==true){
-            tanishq[i]=loginuser;
-            tanishq.push(loginuser);
-            localStorage.setItem("tanishqlogin",JSON.stringify(tanishq))
+            // tanishq[i]=loginuser;
+            // tanishq.push(loginuser);
+            localStorage.setItem("tanishqlogin",JSON.stringify(loginuser));
             alert("logged in successfully");
             document.getElementById("lemail").value=''
             document.getElementById("lpassword").value=''
