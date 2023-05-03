@@ -932,19 +932,20 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div>
-                <div>
+                <!-- <div>
                     <div>
                         <i class="fa-solid fa-house"></i>
                         <p>STORIES</p>
                     </div>
-                </div>
+                </div> -->
                 <div>
                     <div id="switch">
                         <i class="fa-regular fa-user"></i>
                         <p>ACCOUNT</p>
                     </div>
                 </div>
-                <div>
+                <div id="logout"></div>
+                <!-- <div>
                     <div>
                         <i class="fa-regular fa-heart"></i>
                         <p>WISHLIST</p></div>
@@ -954,7 +955,7 @@
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p>CART</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -1413,13 +1414,22 @@
         // console.log(loginuser)
         if(!!loginuser){
             var divforhtml=document.getElementById("switch");
+            var divlogout=document.getElementById("logout");
+            
+            var button=`<button onclick="logout()">Logout</button>`;
             var name=`<h1>${loginuser.uname}</h1>`;
             // console.log(name)
             divforhtml.innerHTML=name;
+            divlogout.innerHTML=button;
         }
         else{
             alert("login user abscent")
         }
+    }
+    function logout(){
+        alert("logout successful.")
+        localStorage.removeItem("tanishqlogin");
+        window.location.reload();
     }
    </script>
 </body>

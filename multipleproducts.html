@@ -527,7 +527,8 @@
                 <div><p>SORT BY : BEST SELLERS<span><i class="fa-solid fa-chevron-down"></i></span></p></div>
             </div>
         </div>
-        <div id="bodyinfo">
+        <div id="jwellery"></div>
+        <!-- <div id="bodyinfo">
             <div>
                 <div>
                     <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500452VHABA12_1.jpg?impolicy=pqmed&imwidth=640"/>
@@ -705,7 +706,7 @@
                     <button>EXplore Now</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div id="footer">
@@ -742,6 +743,18 @@
         </div>
      </div>
     </div>
+    <script>
+        window.onload=function(){
+            var jwellerydiv=document.getElementById("jwellery");
+            var finaldata="";
+            var jwelleryfromls=JSON.parse(localStorage.getItem("jwellery"));
+            for(var i=0;i<jwelleryfromls.length;i++){
+                finaldata+=`<div id="singlejwell"><img src=${jwelleryfromls[i].url} /> <h1>${jwelleryfromls[i].name}</h1> <p>${jwelleryfromls[i].price}</p></div>`
+            }
+            console.log(finaldata,"finaldta here");
+            jwellerydiv.innerHTML=finaldata;
+        }
+    </script>
 </body>
 </html>
 
