@@ -888,7 +888,7 @@
                 <div>
                     <div id="right1">
                         <p>500481VBAABA312JA507023</p>
-                        <p>Leia Garnet Bangle</p>
+                        <p id="name">Leia Garnet Bangle</p>
                         <p><span><i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
@@ -900,7 +900,7 @@
                             <p>Floral Bangle set in 18 Karat Yellow Gold and studded with Baguette Tapered and Round Garnets</p>
                         </div>
                         <div id="right12">
-                            <p>Price <span>Rs.61 664,00</span></p>
+                            <p>Price <span id="price">Rs.61 664,00</span></p>
                             <p>Price inclusive of all taxes.See full <span>Price Breakup</span></p>
                         </div>
                         <div id="right13">
@@ -1068,6 +1068,22 @@
          </div>
         </div>
      </div>
+     <script>
+        window.onload=function(){
+            var cproduct=JSON.parse(localStorage.getItem("curreent-product"));
+            var div=document.getElementById("left");
+            var divname=document.getElementById("name");
+            var divprice=document.getElementById("price");
+            var structure= `<p>Home | Gold Bangles | <span>${cproduct.name}</span></p><div><div><div><img src="${cproduct.url}" /></div><div><img src="${cproduct.url}" /></div><div><img src="${cproduct.url}" /></div></div><div><div><img src="${cproduct.url}" /></div></div></div>`;
+            var name=`${cproduct.name}`;
+            var price=`${cproduct.price}`;
+            console.log(structure);
+            div.innerHTML=structure;
+            divname.innerHTML=name;
+            divprice.innerHTML=price;
+        }
+
+     </script>
     </div>
 </body>
 </html>

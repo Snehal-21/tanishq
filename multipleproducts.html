@@ -545,7 +545,7 @@
             </div>
         </div>
         <div id="jwellery"></div>
-        <!-- <div id="bodyinfo">
+        <div id="bodyinfo">
             <div>
                 <div>
                     <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500452VHABA12_1.jpg?impolicy=pqmed&imwidth=640"/>
@@ -723,7 +723,7 @@
                     <button>EXplore Now</button>
                 </div>
             </div>
-        </div> -->
+        </div> 
     </div>
 
     <div id="footer">
@@ -762,14 +762,21 @@
     </div>
     <script>
         window.onload=function(){
-            var jwellerydiv=document.getElementById("jwellery");
+            var jwellerydiv=document.getElementById("bodyinfo");
             var finaldata="";
             var jwelleryfromls=JSON.parse(localStorage.getItem("jwellery"));
             for(var i=0;i<jwelleryfromls.length;i++){
-                finaldata+=`<div id="singlejwell"><img src=${jwelleryfromls[i].url} /> <h4>${jwelleryfromls[i].name}</h4> <p>${jwelleryfromls[i].price}</p></div>`
+                finaldata+=`<div onClick ='redirect(${JSON.stringify(jwelleryfromls[i])})' id="singlejwell"><img src=${jwelleryfromls[i].url} /> <h4>${jwelleryfromls[i].name}</h4> <p>${jwelleryfromls[i].price}</p></div>`
             }
-            console.log(finaldata,"finaldta here");
+            // console.log(finaldata,"finaldta here");
             jwellerydiv.innerHTML=finaldata;
+        }
+        function redirect(product){
+            var singlejwell=JSON.stringify(product);
+            // console.log(singlejwell);
+            // alert("working");
+            localStorage.setItem("curreent-product",singlejwell);
+            window.location.href='./singleproduct.html';
         }
     </script>
 </body>
