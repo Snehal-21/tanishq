@@ -1091,20 +1091,20 @@
             // console.log(currentuser.uemail);
             var userdata=JSON.parse(localStorage.getItem("tanishqusers"));
             for(var i=0;i<userdata.length;i++){
-                if(currentuser.uemail===userdata[i].uemail){
+                if(currentuser.uemail==userdata[i].uemail){
                     alert("got")
-                   if(userdata[i].cartproducts==undefined){
+                   if(userdata[i].cartproducts === undefined){
                     userdata[i].cartproducts=[product];
                    }
                 else{
                     userdata[i].cartproducts.push(product);
                 }
-                alert("product added to thr cart");
+                alert("product added to the cart");
                 window.location.href='./cart.html';
             }
            
         }
-        localStorage.setItem("userdata",JSON.stringify(userdata));
+        localStorage.setItem("Tanishquserdata",JSON.stringify(userdata));
     }
      </script>
     </div>

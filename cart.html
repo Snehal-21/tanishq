@@ -770,5 +770,37 @@
         </div>
      </div>
     </div>
+    <script>
+        window.onload=function(){
+            var currentuser=JSON.parse(localStorage.getItem("tanishqlogin"));
+            var userdata=JSON.parse(localStorage.getItem("Tanishquserdata"));
+            var divtoappend=document.getElementById("left2");
+            var products;
+            for(var i=0;i<userdata.length;i++){
+                if(currentuser.uemail == userdata[i].uemail){
+                    products=userdata[i].cartproducts
+                }
+            }
+            // var finalproductimage="";
+            // var finalproductprice="";
+            // var finalproductname="";
+
+            var finalcart="";
+            console.log(userdata);
+            for(var i=0;i<products.length;i++){
+                finalcart+=`<div><div><img src="${products[i].url}" /></div>
+                <div><div><div>
+                    <p>${products[i].name}</p>
+                    <p>500481VBAABA312JA506842</p>
+                    <p>Rs.${products[i].price}</p>
+                    </div>
+                    <div>
+                    <p><span><i class="fa-solid fa-circle-minus"></i></span> 1 <span><i class="fa-solid fa-circle-plus"></i></span></p>
+                    </div>
+                    </div>`
+            }
+            divtoappend.innerHTML=finalcart;
+        }
+    </script>
 </body>
 </html>
