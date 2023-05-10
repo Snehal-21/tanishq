@@ -6,7 +6,7 @@ function register(event){
     var email=document.getElementById("temail").value;
     var password=document.getElementById("tpassword").value;
     var confirmpassword=document.getElementById("tconfirmpassword").value;
-
+    var cartproducts=[];
     if(name && email && password && confirmpassword){
         if(password.length>=8 && confirmpassword.length>=8){
             if(password==confirmpassword){
@@ -22,7 +22,7 @@ function register(event){
                    
                 }
                 else{
-                    var tanishq={uname:name,uemail:email,upassword:password,uconfirmpassword:confirmpassword}
+                    var tanishq={uname:name,uemail:email,upassword:password,uconfirmpassword:confirmpassword,cartproducts:cartproducts}
                     tarray.push(tanishq);
                     localStorage.setItem("tanishqusers",JSON.stringify(tarray));
                     alert("Signed up successfully");
