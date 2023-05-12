@@ -1089,7 +1089,7 @@
         function cart(product){
             var currentuser=JSON.parse(localStorage.getItem("tanishqlogin"));
             // console.log(currentuser.uemail);
-            var userdata=JSON.parse(localStorage.getItem("tanishqusers"));
+            var userdata=JSON.parse(localStorage.getItem("Tanishquserdata"));
             for(var i=0;i<userdata.length;i++){
                 if(currentuser.uemail==userdata[i].uemail){
                     alert("got")

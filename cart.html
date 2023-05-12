@@ -168,70 +168,70 @@
         width:100%;
         /* border:1px solid gold; */
     }
-     #left2>div{
+     #cart{
         height:33%;
         width:100%;
-        /* border:1px solid green; */
+        border:1px solid green;
         padding-top: 30px;
         display: flex;
         justify-content: space-between;
         border-top: 1px solid rgb(175, 171, 171);
      }
-      #left2>div>div:nth-child(1){
+      #cart>div:nth-child(1){
         width:23%;
         height:100%;
-        /* border:1px solid red; */
+        border:1px solid red;
       }
-      #left2>div>div:nth-child(1)>img{
+      #cart>div:nth-child(1)>img{
         width:100%;
-        height:75%;
+        height:25%;
         /* border:1px solid green; */
         border-radius: 10px;
       }
-       #left2>div>div:nth-child(2){
+       #cart>div:nth-child(2){
         width:72%;
         height:100%;
         /* border:1px solid red; */
       }
-       #left2>div>div:nth-child(2)>div:nth-child(1){
+       #cart>div:nth-child(2)>div:nth-child(1){
         height:100px;
         width:100%;
         /* border:1px solid purple; */
         display: flex;
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(1){
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(1){
         color:brown;
         font-weight: bold;
         margin-bottom: 3px;
         font-size: 25px;
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(2){
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(2){
         color:grey;
         margin-bottom: 10px;
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(3){
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(3){
         font-weight: bold;
         font-size:25px;
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
         width:70%;
         height:100%;
         /* border:1px solid green; */
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2){
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(2){
         width:30%;
         height:100%;
         /* border:1px solid blue; */
         display: flex;
         justify-content: center;
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p{
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p{
         font-size: 25px;
        }
-       #left2>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p>span{
+       #cart>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>p>span{
         color:rgb(199, 196, 196);
        }
-        #left2>div>div:nth-child(2)>div:nth-child(2){
+        #cart>div:nth-child(2)>div:nth-child(2){
             height:50px;
             width:100%;
             /* border:1px solid purple; */
@@ -240,20 +240,20 @@
             margin-top: 90px;
             align-items: center;
         }
-         #left2>div>div:nth-child(2)>div:nth-child(2)>p{
+         #cart>div:nth-child(2)>div:nth-child(2)>p{
             width:25%;
             /* border:1px solid red; */
             color:brown;
          }
-         #left2>div>div:nth-child(2)>div:nth-child(2)>p>span{
+         #cart>div:nth-child(2)>div:nth-child(2)>p>span{
             font-size: 20px;
             margin-right: 10px;
          }
-         #left2>div>div:nth-child(2)>div:nth-child(2)>div{
+         #cart>div:nth-child(2)>div:nth-child(2)>div{
             width:20%;
             /* border:1px solid red; */
          }
-         #left2>div>div:nth-child(2)>div:nth-child(2)>div>i{
+         #cart>div:nth-child(2)>div:nth-child(2)>div>i{
             font-size: 25px;
             color:brown;
             margin-right: 20px;
@@ -617,7 +617,7 @@
             <div id="left">
                 
                 <div id="left2">
-                    <div>
+                    <div >
                         <div>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31.jpg"/>
                         </div>
@@ -642,7 +642,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div id="cart">
                         <div>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPVDI1AP3.jpg"/>
                         </div>
@@ -667,7 +667,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div id="cart">
                         <div>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/503820VCL1AP1.jpg"/>
                         </div>
@@ -774,7 +774,7 @@
         window.onload=function(){
             var currentuser=JSON.parse(localStorage.getItem("tanishqlogin"));
             var userdata=JSON.parse(localStorage.getItem("Tanishquserdata"));
-            var divtoappend=document.getElementById("left2");
+            var divtoappend=document.getElementById("left");
             var products;
             for(var i=0;i<userdata.length;i++){
                 if(currentuser.uemail == userdata[i].uemail){
@@ -788,16 +788,7 @@
             var finalcart="";
             // console.log(userdata);
             for(var i=0;i<products.length;i++){
-                finalcart+=`<div><div><img src="${products[i].url}" /></div>
-                <div><div><div>
-                    <p>${products[i].name}</p>
-                    <p>500481VBAABA312JA506842</p>
-                    <p>Rs.${products[i].price}</p>
-                    </div>
-                    <div>
-                    <p><span><i class="fa-solid fa-circle-minus"></i></span> 1 <span><i class="fa-solid fa-circle-plus"></i></span></p>
-                    </div>
-                    </div>`
+                finalcart+=
             }
             divtoappend.innerHTML=finalcart;
         }
