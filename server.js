@@ -53,7 +53,7 @@ function login(event){
     // alert("working")
     var lemail=document.getElementById("lemail").value;
     var lpassword=document.getElementById("lpassword").value;
-    var loginuser={}
+    var loginuser={};
     if(lemail && lpassword){
         var tanishq=JSON.parse(localStorage.getItem("tanishqusers"));
        var flag=false;
