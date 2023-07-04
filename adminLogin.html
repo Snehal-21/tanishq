@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminLogin</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#screen{
+    width:100%;
+    height:600px;
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#body{
+    width:400px;
+    height:300px;
+    border:1px solid rgb(219, 217, 217);
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px rgb(208, 207, 207);
+    padding: 20px;
+}
+#body>h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color:brown;
+}
+#body>form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#body>form>input{
+    width:100%;
+    height:40px;
+    border:1px solid brown;
+    outline: none;
+    padding-left: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#body>form>input:nth-child(3){
+    width:100px;
+    background-color: brown;
+    border: none;
+    color:white;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 30px;
+}
+</style>
+<body>
+    <div id="screen">
+        <div id="body">
+            <h1>Admin Login</h1>
+            <form onsubmit="adminLogin(event)">
+                <input type="email" id="adminEmail" placeholder="Enter Admin email"/>
+                <input type="password" id="adminPassword" placeholder="Enter Admin password"/>
+                <input type="submit" value="Login"/>
+            </form>
+        </div>
+    </div>
+    <script src="server.js"></script>
+</body>
+</html>
