@@ -105,41 +105,84 @@
         </div>
     </div>
     <script>
-        window.onload = function () {
-            var users = JSON.parse(localStorage.getItem("tanishqusers"));
+    //     window.onload = function () {
+    //         var users = JSON.parse(localStorage.getItem("tanishqusers"));
 
-            var divtochange = document.getElementById("usersinfo");
-            let data = "";
-            for (let i = 0; i < users.length; i++) {
-                // Display users with cart products
-                for (let j = 0; j < users[i].cartproducts.length; j++) {
-                    data = `
+    //         var divtochange = document.getElementById("usersinfo");
+    //         let data = "";
+    //         for (let i = 0; i < users.length; i++) {
+    //             // Display users with cart products
+    //             for (let j = 0; j < users[i].cartproducts.length; j++) {
+    //                 data = `
+    //     <td>${i + 1}</td>
+    //     <td>${users[i].uname}</td>
+    //     <td>${users[i].uemail}</td>
+    //     <td>${users[i].upassword}</td>
+    //     <td>${users[i].cartproducts[j].name}</td>
+    //   `;
+    //                 let tr = document.createElement("tr");
+    //                 tr.innerHTML = data;
+    //                 divtochange.append(tr);
+    //             }
+
+    //             // Display users without cart products
+    //             if (users[i].cartproducts.length === 0) {
+    //                 data = `
+    //     <td>${i + 1}</td>
+    //     <td>${users[i].uname}</td>
+    //     <td>${users[i].uemail}</td>
+    //     <td>${users[i].upassword}</td>
+    //     <td>No Products</td>
+    //   `;
+    //                 let tr = document.createElement("tr");
+    //                 tr.innerHTML = data;
+    //                 divtochange.append(tr);
+    //             }
+    //             }
+    //         }
+
+
+
+
+    // Using map and displaying product data seperated with ",";
+
+    window.onload = function () {
+  var users = JSON.parse(localStorage.getItem("tanishqusers"));
+
+  var divtochange = document.getElementById("usersinfo");
+  let data = "";
+  for (let i = 0; i < users.length; i++) {
+    let cartProductNames = users[i].cartproducts.map(product => product.name).join(", ");
+
+    // Display users with cart products
+    if (cartProductNames.length > 0) {
+      data = `
         <td>${i + 1}</td>
         <td>${users[i].uname}</td>
         <td>${users[i].uemail}</td>
         <td>${users[i].upassword}</td>
-        <td>${users[i].cartproducts[j].name}</td>
+        <td>${cartProductNames}</td>
       `;
-                    let tr = document.createElement("tr");
-                    tr.innerHTML = data;
-                    divtochange.append(tr);
-                }
+      let tr = document.createElement("tr");
+      tr.innerHTML = data;
+      divtochange.append(tr);
+    }
 
-                // Display users without cart products
-                if (users[i].cartproducts.length === 0) {
-                    data = `
+    // Display users without cart products
+    if (users[i].cartproducts.length === 0) {
+      data = `
         <td>${i + 1}</td>
         <td>${users[i].uname}</td>
         <td>${users[i].uemail}</td>
         <td>${users[i].upassword}</td>
         <td>No Products</td>
       `;
-                    let tr = document.createElement("tr");
-                    tr.innerHTML = data;
-                    divtochange.append(tr);
-                }
-            }
-        };
+      let tr = document.createElement("tr");
+      tr.innerHTML = data;
+      divtochange.append(tr);
+    }
+  }
+};
 
         
     </script>
