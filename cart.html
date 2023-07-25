@@ -171,25 +171,27 @@
      #cart{
         height:33%;
         width:100%;
-        border:1px solid green;
+        /* border:1px solid green; */
         padding-top: 30px;
+        padding-bottom: 30px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         border-top: 1px solid rgb(175, 171, 171);
      }
       #cart>div:nth-child(1){
         width:23%;
-        height:100%;
-        border:1px solid red;
+        height:80%;
+        /* border:1px solid red; */
       }
       #cart>div:nth-child(1)>img{
         width:100%;
-        height:25%;
+        height:100%;
         /* border:1px solid green; */
         border-radius: 10px;
       }
        #cart>div:nth-child(2){
-        width:72%;
+        width:65%;
         height:100%;
         /* border:1px solid red; */
       }
@@ -559,16 +561,16 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <div>
-                    <div>
+                    <!-- <div>
                         <div>
                             <i class="fa-solid fa-house"></i>
                             <p>STORIES</p>
                         </div>
-                    </div>
+                    </div> -->
                     <div>
                         <div>
                             <i class="fa-regular fa-user"></i>
-                            <p>ACCOUNT</p>
+                            <p id="switch">ACCOUNT</p>
                         </div>
                     </div>
                     <div>
@@ -582,6 +584,7 @@
                             <p>CART</p>
                         </div>
                     </div>
+                    <div  id="logout"></div>
                 </div>
             </div>
         </div>
@@ -617,7 +620,7 @@
             <div id="left">
                 
                 <div id="left2">
-                    <div >
+                    <!-- <div id="cart" >
                         <div>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500481VBABA31.jpg"/>
                         </div>
@@ -690,7 +693,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                    
                 </div>
@@ -772,9 +775,22 @@
     </div>
     <script>
         window.onload=function(){
+
+             var loginuser=JSON.parse(localStorage.getItem("tanishqlogin"));
+        // console.log(loginuser)
+        if(!!loginuser){
+            var divforhtml=document.getElementById("switch");
+            var divlogout=document.getElementById("logout");
+            
+            var button=`<button style="height:30px;width:70px;background-color: brown;border:none;color:white;font-weight:bold;" onclick="logout()">Logout</button>`;
+            var name=`<h1 style="font-size:22px;">${loginuser.uname}</h1>`;
+            // console.log(name)
+            divforhtml.innerHTML=name;
+            divlogout.innerHTML=button;
+
             var currentuser=JSON.parse(localStorage.getItem("tanishqlogin"));
-            var userdata=JSON.parse(localStorage.getItem("Tanishquserdata"));
-            var divtoappend=document.getElementById("left");
+            var userdata=JSON.parse(localStorage.getItem("tanishqusers"));
+            var divtoappend=document.getElementById("left2");
             var products;
             for(var i=0;i<userdata.length;i++){
                 if(currentuser.uemail == userdata[i].uemail){
@@ -786,12 +802,46 @@
             // var finalproductname="";
 
             var finalcart="";
-            // console.log(userdata);
+            console.log(products);
             for(var i=0;i<products.length;i++){
-                finalcart+=``;
+                finalcart+=`<div id="cart" >
+                        <div>
+                            <img src="${products[i].url}"/>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <p>${products[i].name}</p>
+                                    <p>500481VBAABA312JA506842</p>
+                                    <p>Rs.${products[i].price}</p>
+                                </div>
+                                <div>
+                                    <p><span><i class="fa-solid fa-circle-minus"></i></span> 1 <span><i class="fa-solid fa-circle-plus"></i></span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p><span><i class="fa-regular fa-square"></i></span>Add Gift Message</p>
+                                <div>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
             }
             divtoappend.innerHTML=finalcart;
         }
+         else{
+            alert("login user abscent");
+            window.location.href='./login.html';
+        }
+    }
+
+       function logout(){
+        alert("logout successful.")
+        localStorage.removeItem("tanishqlogin");
+        window.location.href='./login.html';
+    }
     </script>
 </body>
 </html>

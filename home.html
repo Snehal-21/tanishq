@@ -445,7 +445,7 @@
     #body7{
         width:100%;
         height:500px;
-        background-image: url(" https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/a94e7dbe-ef00-4523-b3c7-5d9ad861ccbf/desktop/naturefinest-desktop.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-a94e7dbe-ef00-4523-b3c7-5d9ad861ccbf-desktop-otFZisl");
+        background-image: url(" https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw92ebf2f3/homepage/mia-activation-desktoph.jpg");
         background-size: 100% 100%;
         display: flex;
         justify-content: center;
@@ -506,7 +506,7 @@
     #body9>div:nth-child(2){
         width:50%;
         /* height:100%; */
-        background-image:url("https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/2caee158-9a61-4b74-b677-4748a5fb2e5e/smartphone/rivah_D.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-2caee158-9a61-4b74-b677-4748a5fb2e5e-desktop-odkhNkR");
+        background-image:url("https://www.tanishq.co.in/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwfc13fe09/homepage/posters/rivah_desktop.jpg");
        background-repeat: no-repeat;
        background-size: 100%;
        display: flex;
@@ -939,13 +939,13 @@
                     </div>
                 </div> -->
                 <div>
-                    <div id="switch">
+                    <div >
                         <i class="fa-regular fa-user"></i>
-                        <p>ACCOUNT</p>
+                        <p id="switch">ACCOUNT</p>
                     </div>
                 </div>
-                <div id="logout"></div>
-                <!-- <div>
+                
+                <div>
                     <div>
                         <i class="fa-regular fa-heart"></i>
                         <p>WISHLIST</p></div>
@@ -955,7 +955,8 @@
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p>CART</p>
                     </div>
-                </div> -->
+                </div>
+                <div  id="logout"></div>
             </div>
         </div>
     </div>
@@ -997,7 +998,7 @@
     </div>
    </div>
     <div id="image">
-        <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/8658d49a-0b4f-4ef6-a28f-a3395aa083c4/tablet/stunning-ea-desktop.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-8658d49a-0b4f-4ef6-a28f-a3395aa083c4-desktop-otdjdcd&impolicy=pqmed"/>
+        <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwa1524573/homepage/HeroBanner/friendship-day-desktop.jpg"/>
     </div>
     <div id="homebody">
         <div id="body1">
@@ -1410,26 +1411,27 @@
     window.onload=function(){
         // alert("working")
 
-        var loginuser=JSON.parse(localStorage.getItem("tanishqlogin"))
+        var loginuser=JSON.parse(localStorage.getItem("tanishqlogin"));
         // console.log(loginuser)
         if(!!loginuser){
             var divforhtml=document.getElementById("switch");
             var divlogout=document.getElementById("logout");
             
-            var button=`<button onclick="logout()">Logout</button>`;
-            var name=`<h1>${loginuser.uname}</h1>`;
+            var button=`<button style="height:30px;width:70px;background-color: brown;border:none;color:white;font-weight:bold;" onclick="logout()">Logout</button>`;
+            var name=`<h1 style="font-size:22px;">${loginuser.uname}</h1>`;
             // console.log(name)
             divforhtml.innerHTML=name;
             divlogout.innerHTML=button;
         }
         else{
-            alert("login user abscent")
+            alert("login user abscent");
+            window.location.href='./login.html';
         }
     }
     function logout(){
         alert("logout successful.")
         localStorage.removeItem("tanishqlogin");
-        window.location.reload();
+        window.location.href='./login.html';
     }
    </script>
 </body>

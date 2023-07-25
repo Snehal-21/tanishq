@@ -468,16 +468,16 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div>
-                <div>
+                <!-- <div>
                     <div>
                         <i class="fa-solid fa-house"></i>
                         <p>STORIES</p>
                     </div>
-                </div>
+                </div> -->
                 <div>
                     <div>
                         <i class="fa-regular fa-user"></i>
-                        <p>ACCOUNT</p>
+                        <p id="switch">ACCOUNT</p>
                     </div>
                 </div>
                 <div>
@@ -491,6 +491,7 @@
                         <p>CART</p>
                     </div>
                 </div>
+                <div  id="logout"></div>
             </div>
         </div>
     </div>
@@ -546,7 +547,7 @@
         </div>
         <div id="jwellery"></div>
         <div id="bodyinfo">
-            <div>
+            <!-- <div>
                 <div>
                     <img src="https://staticimg.titan.co.in/Tanishq/Catalog/500452VHABA12_1.jpg?impolicy=pqmed&imwidth=640"/>
                 </div>
@@ -722,7 +723,7 @@
                     <p>Women | Bangle</p>
                     <button>EXplore Now</button>
                 </div>
-            </div>
+            </div> -->
         </div> 
     </div>
 
@@ -762,6 +763,22 @@
     </div>
     <script>
         window.onload=function(){
+
+            var loginuser=JSON.parse(localStorage.getItem("tanishqlogin"));
+
+            if(!!loginuser){
+
+              var divforhtml=document.getElementById("switch");
+            var divlogout=document.getElementById("logout");
+            
+            var button=`<button style="height:30px;width:70px;background-color: brown;border:none;color:white;font-weight:bold;" onclick="logout()">Logout</button>`;
+            var name=`<h1 style="font-size:22px;">${loginuser.uname}</h1>`;
+            // console.log(name)
+            divforhtml.innerHTML=name;
+            divlogout.innerHTML=button;
+
+
+
             var jwellerydiv=document.getElementById("bodyinfo");
             var finaldata="";
             var jwelleryfromls=JSON.parse(localStorage.getItem("jwellery"));
@@ -771,6 +788,11 @@
             // console.log(finaldata,"finaldta here");
             jwellerydiv.innerHTML=finaldata;
         }
+        else{
+            alert("Current user Abscent.");
+            window.location.href='./login.html';
+        }
+        }
         function redirect(product){
             var singlejwell=JSON.stringify(product);
             // console.log(singlejwell);
@@ -778,6 +800,11 @@
             localStorage.setItem("curreent-product",singlejwell);
             window.location.href='./singleproduct.html';
         }
+        function logout(){
+        alert("logout successful.")
+        localStorage.removeItem("tanishqlogin");
+        window.location.href='./login.html';
+    }
     </script>
 </body>
 </html>
